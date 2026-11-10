@@ -93,6 +93,14 @@ def play_quiz(quizzes):   # 👉 quizzes를 받도록 변경
     total = len(quizzes)
     print(f"🏆 최종 점수: {total}문제 중 {score}문제 정답!")
 
+def show_quizzes(quizzes):
+    print("\n===== 📋 등록된 퀴즈 목록 =====")
+    if len(quizzes) == 0:          # 퀴즈가 하나도 없을 때
+        print("아직 등록된 퀴즈가 없습니다.")
+        return
+
+    for i, quiz in enumerate(quizzes, 1):   # 1번부터 번호 매기기
+        print(f"{i}. {quiz['question']}")
 
 def main():
     quizzes = load_quizzes()  # 👉 파일에서 퀴즈 불러오기
@@ -108,6 +116,8 @@ def main():
             play_quiz(quizzes)   # 👉 quizzes 전달
         elif choice == "2":
             add_quiz(quizzes)
+        elif choice == "3":              
+            show_quizzes(quizzes) 
         else:
             print(f"[{choice}]번을 선택하셨습니다. (아직 구현 전)")
 
