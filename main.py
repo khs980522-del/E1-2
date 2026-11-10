@@ -91,9 +91,12 @@ def play_quiz(quizzes):   # 👉 quizzes를 받도록 변경
         for num, choice in enumerate(quiz["choices"], 1):
             print(f"  {num}. {choice}")
 
-        answer = input("정답 번호를 입력하세요 (1~4): ")
-
-        if answer == str(quiz["answer"]):
+        while True:   # 👈 올바른 입력이 나올 때까지 반복
+            answer = input("정답 번호를 입력하세요 (1~4): ")
+            if answer in ["1", "2", "3", "4"]:   # 👈 1~4 중 하나면 통과
+                break   # 👈 반복 탈출
+            print("⚠️ 1~4 사이의 숫자를 입력하세요.")   # 👈 안내 후 다시 입력
+        if answer == str(quiz["answer"]):  
             print("정답입니다! ⭕")
             score += 1
         else:
