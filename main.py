@@ -142,7 +142,7 @@ def main():
         elif choice == "4":              
             show_high_score()
         else:
-            print(f"[{choice}]번을 선택하셨습니다. (아직 구현 전)")
+            print("⚠️ 잘못된 입력입니다. 0~4 사이의 숫자를 입력하세요.")
 
 
 main()
