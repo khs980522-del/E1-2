@@ -46,7 +46,7 @@ python main.py
 ## 5. 파일 구조
 
 ```
-quiz-game/
+E1-2/
 ├── main.py
 ├── state.json
 ├── README.md
@@ -92,11 +92,11 @@ quiz-game/
 
 | 메뉴 | 퀴즈 풀기 |
 |---|---|
-| ![menu](docs/screenshots/menu.png) | ![play](docs/screenshots/play.png) |
+| ![menu](docs/screenshot/menu.png) | ![play](docs/screenshot/play.png) |
 
 | 퀴즈 추가 | 점수 확인 |
 |---|---|
-| ![add](docs/screenshots/add_quiz.png) | ![score](docs/screenshots/score.png) |
+| ![add](docs/screenshot/add_quiz.png) | ![score](docs/screenshot/score.png) |
 
 ## 8. 개발 기록
 
