@@ -26,6 +26,24 @@ def show_menu():
     print("0. 종료")
     print("==========================")
 
+def play_quiz():
+    print("\n----- 퀴즈 풀기 시작! -----")
+    for i, quiz in enumerate(quizzes, 1):
+        print(f"\n[문제 {i}] {quiz['question']}")
+        # 선택지 4개 보여주기
+        for num, choice in enumerate(quiz["choices"], 1):
+            print(f"  {num}. {choice}")
+
+        answer = input("정답 번호를 입력하세요 (1~4): ")
+
+        # 정답 확인
+        if answer == str(quiz["answer"]):
+            print("정답입니다! ⭕")
+        else:
+            correct = quiz["answer"]
+            print(f"틀렸습니다! ❌ 정답은 {correct}번입니다.")
+
+    print("\n----- 퀴즈 끝! -----")
 
 def main():
     while True:
@@ -35,6 +53,8 @@ def main():
         if choice == "0":
             print("게임을 종료합니다. 안녕히 가세요! 👋")
             break
+        elif choice == "1":
+            play_quiz()
         else:
             print(f"[{choice}]번을 선택하셨습니다. (아직 구현 전)")
 
