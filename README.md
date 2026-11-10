@@ -93,11 +93,11 @@ E1-2/
 
 | 메뉴 | 퀴즈 풀기 |
 |---|---|
-| ![menu](docs/screenshot/menu.png) | ![play](docs/screenshot/play.png) |
+| ![menu](screenshot/menu.png) | ![play](screenshot/play.png) |
 
 | 퀴즈 추가 | 점수 확인 |
 |---|---|
-| ![add](docs/screenshot/add_quiz.png) | ![score](docs/screenshot/score.png) |
+| ![add](screenshot/add_quiz.png) | ![score](screenshot/score.png) |
 
 ## 8. 개발 기록
 
