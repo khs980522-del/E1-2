@@ -1,4 +1,15 @@
 import json
+import os
+
+def load_high_score():
+    if os.path.exists("score.json"):          # 파일이 있으면
+        with open("score.json", "r", encoding="utf-8") as f:
+            return json.load(f)               # 저장된 최고 점수 반환
+    return 0                                   # 없으면 0점
+
+def save_high_score(score):
+    with open("score.json", "w", encoding="utf-8") as f:
+        json.dump(score, f)                    # 점수를 파일에 저장
 
 # 기본 퀴즈 데이터 (파일이 없을 때 사용)
 default_quizzes = [
@@ -93,6 +104,11 @@ def play_quiz(quizzes):   # 👉 quizzes를 받도록 변경
     total = len(quizzes)
     print(f"🏆 최종 점수: {total}문제 중 {score}문제 정답!")
 
+    high_score = load_high_score()       # 👈 추가: 기존 최고 점수 불러오기
+    if score > high_score:               # 👈 이번 점수가 더 높으면
+        save_high_score(score)           # 👈 새 기록 저장
+        print("🎉 새로운 최고 점수를 달성했습니다!")
+
 def show_quizzes(quizzes):
     print("\n===== 📋 등록된 퀴즈 목록 =====")
     if len(quizzes) == 0:          # 퀴즈가 하나도 없을 때
@@ -101,6 +117,11 @@ def show_quizzes(quizzes):
 
     for i, quiz in enumerate(quizzes, 1):   # 1번부터 번호 매기기
         print(f"{i}. {quiz['question']}")
+
+def show_high_score():
+    high_score = load_high_score()
+    print("\n===== 🏆 최고 점수 =====")
+    print(f"지금까지 최고 점수: {high_score}점")        
 
 def main():
     quizzes = load_quizzes()  # 👉 파일에서 퀴즈 불러오기
@@ -118,6 +139,8 @@ def main():
             add_quiz(quizzes)
         elif choice == "3":              
             show_quizzes(quizzes) 
+        elif choice == "4":              
+            show_high_score()
         else:
             print(f"[{choice}]번을 선택하셨습니다. (아직 구현 전)")
 
