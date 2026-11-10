@@ -28,22 +28,26 @@ def show_menu():
 
 def play_quiz():
     print("\n----- 퀴즈 풀기 시작! -----")
+    score = 0  # 👉 (1) 점수 변수 추가 (0점부터 시작)
+
     for i, quiz in enumerate(quizzes, 1):
         print(f"\n[문제 {i}] {quiz['question']}")
-        # 선택지 4개 보여주기
         for num, choice in enumerate(quiz["choices"], 1):
             print(f"  {num}. {choice}")
 
         answer = input("정답 번호를 입력하세요 (1~4): ")
 
-        # 정답 확인
         if answer == str(quiz["answer"]):
             print("정답입니다! ⭕")
+            score += 1  # 👉 (2) 맞히면 점수 +1
         else:
             correct = quiz["answer"]
             print(f"틀렸습니다! ❌ 정답은 {correct}번입니다.")
 
     print("\n----- 퀴즈 끝! -----")
+    # 👉 (3) 최종 점수 발표
+    total = len(quizzes)
+    print(f"🏆 최종 점수: {total}문제 중 {score}문제 정답!")
 
 def main():
     while True:
