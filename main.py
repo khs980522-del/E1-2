@@ -34,6 +34,32 @@ def save_quizzes(quizzes):
     with open(FILE_NAME, "w", encoding="utf-8") as f:
         json.dump(quizzes, f, ensure_ascii=False, indent=2)
 
+def add_quiz(quizzes):
+    print("\n----- 새 퀴즈 추가 -----")
+
+    # 1) 문제 입력받기
+    question = input("문제를 입력하세요: ")
+
+    # 2) 선택지 4개 입력받기
+    choices = []
+    for i in range(1, 5):
+        choice = input(f"선택지 {i}번: ")
+        choices.append(choice)
+
+    # 3) 정답 번호 입력받기
+    answer = int(input("정답 번호를 입력하세요 (1~4): "))
+
+    # 4) 딕셔너리로 만들어서 리스트에 추가
+    new_quiz = {
+        "question": question,
+        "choices": choices,
+        "answer": answer
+    }
+    quizzes.append(new_quiz)
+
+    # 5) 파일에 저장
+    save_quizzes(quizzes)
+    print("✅ 퀴즈가 추가되었습니다!")
 
 def show_menu():
     print("\n===== 🎯 상식 퀴즈 게임 =====")
@@ -80,6 +106,8 @@ def main():
             break
         elif choice == "1":
             play_quiz(quizzes)   # 👉 quizzes 전달
+        elif choice == "2":
+            add_quiz(quizzes)
         else:
             print(f"[{choice}]번을 선택하셨습니다. (아직 구현 전)")
 
