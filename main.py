@@ -74,6 +74,37 @@ class QuizGame:
         with open(QUIZ_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
 
+    def delete_quiz(self):
+        """퀴즈 목록을 보여주고 하나를 골라 삭제"""
+        if not self.quizzes:          # 퀴즈가 하나도 없으면
+            print("⚠️ 삭제할 퀴즈가 없습니다.")
+            return
+
+        # 1) 현재 퀴즈 목록 번호와 함께 보여주기
+        print("\n===== 🗑️ 퀴즈 삭제 =====")
+        for i, quiz in enumerate(self.quizzes, start=1):
+            print(f"{i}. {quiz.question}")
+
+        # 2) 몇 번을 지울지 입력받기
+        choice = input("삭제할 퀴즈 번호 (취소: 0): ").strip()
+
+        if not choice.isdigit():       # 숫자가 아니면
+            print("⚠️ 숫자를 입력해주세요.")
+            return
+
+        num = int(choice)
+        if num == 0:                   # 0이면 취소
+            print("삭제를 취소했습니다.")
+            return
+        if num < 1 or num > len(self.quizzes):   # 범위 밖이면
+            print("⚠️ 없는 번호입니다.")
+            return
+
+        # 3) 실제 삭제 (리스트는 0부터 시작하니 num-1)
+        removed = self.quizzes.pop(num - 1)
+        self.save_quizzes()            # 파일에도 저장!
+        print(f"✅ '{removed.question}' 삭제 완료!")
+    
     def load_high_score(self):
         if os.path.exists(SCORE_FILE):
             with open(SCORE_FILE, "r", encoding="utf-8") as f:
@@ -91,6 +122,7 @@ class QuizGame:
         print("2. 퀴즈 추가")
         print("3. 퀴즈 목록 보기")
         print("4. 점수 확인")
+        print("5. 퀴즈 삭제")
         print("0. 종료")
         print("==========================")
 
@@ -178,6 +210,8 @@ class QuizGame:
                 self.show_quizzes()
             elif choice == "4":
                 self.show_high_score()
+            elif choice == "5":         
+                self.delete_quiz()    
             else:
                 print("⚠️ 잘못된 입력입니다. 0~4 사이의 숫자를 입력하세요.")
      except KeyboardInterrupt:
