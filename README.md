@@ -100,6 +100,10 @@ score.json이 없으면 최고 점수를 0점으로 초기화합니다.
 |---|---|
 | ![add](screenshot/add_quiz.png) | ![score](screenshot/score.png) |
 
+| 다른 명령어 입력시 | 파일 손상시 |
+|---|---|
+| ![add](screenshot/exeptsituation.png) | ![score](screenshot/break.png) |
+
 ## 8. 개발 기록
 
 ### Git 작업 기록
