@@ -24,7 +24,7 @@ class Quiz:
 
     def is_correct(self, user_input):
         """사용자 입력이 정답인지 판별"""
-        return user_input == str(self.answer)
+        return int(user_input) == int(self.answer)
 
     def to_dict(self):
         """JSON 저장용 → 딕셔너리로 변환"""
