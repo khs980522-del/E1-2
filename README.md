@@ -129,7 +129,11 @@ score.json이 없으면 최고 점수를 0점으로 초기화합니다.
 위 그래프에서 브랜치가 분기되었다가 `Merge` 커밋으로
 합쳐지는 과정을 확인할 수 있습니다.
 
-### 막혔던 점과 해결 방법
+## clone 생성 및 수정 후 pull 작업
+
+![깃 클론 생성](screenshot/makeclone.png)
+
+## 막혔던 점과 해결 방법
 
 - quizzes.json 파일을 저장할 때 한글이 깨지는 문제가 있었습니다.
   → json.dump()에 ensure_ascii=False, encoding="utf-8" 옵션을 추가해 해결했습니다.
