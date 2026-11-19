@@ -181,20 +181,6 @@ E1-2/
 
 ### 커밋 로그 및 병합 이력 증빙 (`git log --oneline --graph`)
 ```text
-* ee50634 (HEAD -> main, origin/main, origin/HEAD) docs:README 수정
-* 529d1cc docs:py코드 수정
-* 1b5d970 docs: README 퀴즈삭제 추가
-* 2dc5fef docs:README 수정
-* 42fa90e docs: README.md 내용 추가
-* 2526d70 docs:깃 푸쉬 추가
-* dc23bb3 docs:클론 생성 추가
-* 9881c1c docs: 클론생성 및 리드미 수정 추가
-* c4df9ae 브랜치 전략 숫자 변경
-* 04e024b Docs: 브랜치 전략 및 그래프 스크린샷 추가
-* c50e030 퀴즈 삭제 기능 추가
-* 6c24796 README에 실행 화면 추가
-* bc1dee8 README 수정
-* 155a690 Feat: 기본 퀴즈를 5개로 추가
 * 7d0d11c Docs:README이미지 경로 수정
 * 4af1ebc Docs: README 병합 및 수정
 *   1dc1b55 Merge: 원격 README 병합 및 충돌 해결
@@ -208,11 +194,7 @@ E1-2/
 * 5714310 Feat: 퀴즈 추가 기능 구현 및 quizzes.json 제외
 * 454649a Feat: JSON 파일로 퀴즈 저장/불러오기 기능 추가
 * 0063525 Feat: 점수 계산 기능 구현
-* f95559c Feat: 퀴즈 풀기 기능 구현
-* 519724d Feat: 4지선다 퀴즈 데이터 추가
-* d9fd80f Feat: 메뉴 화면 구현
-* 3b9fd31 Docs: README.md 내용 작성 및 주제 선정
-* 7a097c7 Chore: 프로젝트 초기 설정 (.gitignore, README.md)
+```
 
 ## 11. 🌿 브랜치 전략
 
