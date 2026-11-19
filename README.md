@@ -144,8 +144,6 @@ E1-2/
 | 요구 변경 예시 | 수정 대상 (클래스 / 메서드) | 영향 범위 설명 |
 |---|---|---|
 | 정답 입력 방식을 숫자(`1~4`)에서 문자(`A~D`)로 변경 | `Quiz.is_correct()`, `QuizGame.play_quiz()`, `QuizGame.add_quiz()` | 입력값 검증 범위 조건문과 정답 비교 로직만 수정하며 데이터 저장 포맷 로직은 유지됩니다. |
-| 데이터 저장 포맷을 JSON에서 CSV 또는 SQLite DB로 변경 | `QuizGame.load_quizzes()`, `QuizGame.save_quizzes()`, `QuizGame.save_high_score()` | 입출력 계층 메서드만 교체하면 되며, `Quiz` 모델 및 `run()` 게임 흐름에는 영향이 없습니다. |
-| 점수 계산 방식 변경 (예: 문제별 차등 배점 도입) | `Quiz.__init__()`, `QuizGame.play_quiz()` | `Quiz` 모델에 배점 속성을 추가하고 `play_quiz()`의 점수 합산식을 수정합니다. |
 
 ## 9. 실행 화면
 
