@@ -181,22 +181,38 @@ E1-2/
 
 ### 커밋 로그 및 병합 이력 증빙 (`git log --oneline --graph`)
 ```text
-*   7b3e9a1 (HEAD -> main, origin/main) Merge branch 'feature/delete-quiz'
+* ee50634 (HEAD -> main, origin/main, origin/HEAD) docs:README 수정
+* 529d1cc docs:py코드 수정
+* 1b5d970 docs: README 퀴즈삭제 추가
+* 2dc5fef docs:README 수정
+* 42fa90e docs: README.md 내용 추가
+* 2526d70 docs:깃 푸쉬 추가
+* dc23bb3 docs:클론 생성 추가
+* 9881c1c docs: 클론생성 및 리드미 수정 추가
+* c4df9ae 브랜치 전략 숫자 변경
+* 04e024b Docs: 브랜치 전략 및 그래프 스크린샷 추가
+* c50e030 퀴즈 삭제 기능 추가
+* 6c24796 README에 실행 화면 추가
+* bc1dee8 README 수정
+* 155a690 Feat: 기본 퀴즈를 5개로 추가
+* 7d0d11c Docs:README이미지 경로 수정
+* 4af1ebc Docs: README 병합 및 수정
+*   1dc1b55 Merge: 원격 README 병합 및 충돌 해결
 |\  
-| * 4c8d2f0 feat: 퀴즈 삭제 기능 및 인덱스 예외 처리 구현
-| * 9a1b5e3 docs: README 기능 목록에 퀴즈 삭제 항목 추가
-|/  
-*   2e6f4d8 Merge branch 'feature/exception-handling'
-|\  
-| * 8f0c3a2 fix: JSONDecodeError 발생 시 .bak 백업 및 복구 로직 추가
-| * 5d7e1b9 fix: KeyboardInterrupt 강제 종료 시 데이터 저장 보장
-|/  
-* 6a9b2c4 refactor: Quiz와 QuizGame 클래스 책임 분리
-* 3f1d8e5 feat: 최고 점수 저장 및 조회 기능 구현
-* 1c4e7a0 feat: 퀴즈 추가 및 목록 조회 기능 구현
-* 9e2b5d1 feat: 퀴즈 풀기 루프 및 기본 퀴즈 5개 구성
-* 0a1b2c3 chore: 초기 프로젝트 구조 및 .gitignore 설정
-```
+| * f2f7e1c Initial commit
+* 6bd3ca0 Docs: README.md 수정 및 screenshot 폴더 추가
+* 99954e9 11단계: 정답 입력 검증 추가 (1~4 범위 외 재입력)
+* ef7220a Feat: 잘못된 메뉴 입력에 대한 예외 처리 구현
+* 729c394 Feat: 점수 확인 및 최고 점수 저장 기능 구현
+* b35a3af Feat: 퀴즈 목록 보기 기능 구현
+* 5714310 Feat: 퀴즈 추가 기능 구현 및 quizzes.json 제외
+* 454649a Feat: JSON 파일로 퀴즈 저장/불러오기 기능 추가
+* 0063525 Feat: 점수 계산 기능 구현
+* f95559c Feat: 퀴즈 풀기 기능 구현
+* 519724d Feat: 4지선다 퀴즈 데이터 추가
+* d9fd80f Feat: 메뉴 화면 구현
+* 3b9fd31 Docs: README.md 내용 작성 및 주제 선정
+* 7a097c7 Chore: 프로젝트 초기 설정 (.gitignore, README.md)
 
 ## 11. 🌿 브랜치 전략
 
