@@ -213,7 +213,7 @@ class QuizGame:
             elif choice == "5":         
                 self.delete_quiz()    
             else:
-                print("⚠️ 잘못된 입력입니다. 0~4 사이의 숫자를 입력하세요.")
+                print("⚠️ 잘못된 입력입니다. 0~5 사이의 숫자를 입력하세요.")
      except KeyboardInterrupt:
             print("\n게임을 종료합니다. 데이터를 저장했습니다.")
             self.save_quizzes()  # 종료 전 저장 보장
